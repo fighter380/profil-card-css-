@@ -1,20 +1,12 @@
+/* ===== Body ===== */
 body {
   background-color: violet;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-.photo-profile {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  display: block;
-  margin: 0 auto;
-}
-.name-card {
-  text-align: center;
-  font-size: 24px;
-  margin-top: 10px;
-  padding: 30px;
-}
-.profile-card-container{
+
+/* ===== Carte de profile ===== */
+.profile-card-container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   max-width: 300px;
@@ -24,16 +16,81 @@ body {
   background-color: white;
   transition: 0.3s;
 }
-.profile-card-container:hover{
+
+.profile-card-container:hover {
   background-color: blueviolet;
   transform: scale(1.05); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-.profile-card{
+
+/* ===== Titre ===== */
+.profile-card {
   text-align: center;
   font-size: 28px;
+  margin: 0 0 15px 0;
 }
-.description-card{
+
+/* ===== Photo ===== */
+.photo-profile {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto 15px auto;
+  object-fit: cover; /* pour garder les proportions de l’image */
+}
+
+/* ===== Nom ===== */
+.name-card {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* ===== Description ===== */
+.description-card {
   text-align: center;
   font-size: 17px;
+  line-height: 1.4;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+  .profile-card-container {
+    max-width: 70%;
+    padding: 15px;
+  }
+  .profile-card {
+    font-size: 24px;
+  }
+  .name-card {
+    font-size: 20px;
+  }
+  .description-card {
+    font-size: 16px;
+  }
+  .photo-profile {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .profile-card {
+    font-size: 22px;
+  }
+  .name-card {
+    font-size: 18px;
+  }
+  .description-card {
+    font-size: 14px;
+  }
+  .photo-profile {
+    width: 100px;
+    height: 100px;
+  }
 }
